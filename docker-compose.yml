@@ -10,6 +10,26 @@ services:
       - --event_file
       - /app/events.json
       - --api_address
-      - http://host.docker.internal:8080
+      - http://consumer:8080
       - --period
-      - "5"
+      - "1"
+      
+  consumer:
+    container_name: consumer
+    build:
+      context: .
+      dockerfile: src/consumer/Dockerfile
+    command: 
+      - --api_address
+      - 0.0.0.0
+      - --api_port
+      - "8080"
+      - --database_path
+      - /app/db/database.sqlite3
+    volumes:
+      - consumer-db:/app/db
+    ports:
+      - "8080:8080"
+
+volumes:
+  consumer-db:
