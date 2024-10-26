@@ -11,7 +11,17 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.12"
+
+[tool.poetry.group.propogator]
+optional = true
+
+[tool.poetry.group.propogator.dependencies]
 requests = "^2.32.3"
+
+[tool.poetry.group.consumer]
+optional = true
+
+[tool.poetry.group.consumer.dependencies]
 flask = "^3.0.3"
 
 [tool.poetry.scripts]

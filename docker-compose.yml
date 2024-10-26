@@ -10,6 +10,6 @@ services:
       - --event_file
       - /app/events.json
       - --api_address
-      - http://localhost:8080
+      - http://host.docker.internal:8080
       - --period
       - "5"

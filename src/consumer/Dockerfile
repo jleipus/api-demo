@@ -12,7 +12,7 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock ./
 RUN touch README.md
 
-RUN poetry install --with propogator --no-root && rm -rf $POETRY_CACHE_DIR
+RUN poetry install --with consumer --no-root && rm -rf $POETRY_CACHE_DIR
 
 FROM python:3.12.2-slim-bullseye as run
 
@@ -25,4 +25,4 @@ WORKDIR /app
 
 COPY src /app
 
-ENTRYPOINT ["python", "-m", "propogator.main"]
+ENTRYPOINT ["python", "-m", "consumer.main"]
