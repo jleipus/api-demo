@@ -1,0 +1,15 @@
+services:
+  propogator:
+    container_name: propogator
+    build:
+      context: .
+      dockerfile: src/propogator/Dockerfile
+    volumes:
+      - ./events.json:/app/events.json
+    command: 
+      - --event_file
+      - /app/events.json
+      - --api_address
+      - http://localhost:8080
+      - --period
+      - "5"

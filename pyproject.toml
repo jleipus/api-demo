@@ -11,6 +11,8 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.12"
+requests = "^2.32.3"
+flask = "^3.0.3"
 
 [tool.poetry.scripts]
 propogator = "propogator.main:main"
