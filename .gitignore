@@ -1,0 +1,43 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.env
+.venv
+
+# Poetry files
+poetry.lock
+
+# Pytest and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+
+# Distribution/build files
+build/
+dist/
+*.egg-info/
+*.egg
+*.manifest
+
+# Logs
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# src directory specific to this project structure
+src/__pycache__/
+src/**/__pycache__/

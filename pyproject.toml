@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "api-demo"
+version = "0.1.0"
+description = ""
+authors = ["Joris Leipus <jorislei@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "propogator", from = "src" },
+    { include = "consumer", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.scripts]
+propogator = "propogator.main:main"
+consumer = "consumer.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
