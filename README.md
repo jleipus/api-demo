@@ -36,16 +36,16 @@ The consumer service accepts the following arguments:
 ### Poetry
 
 To run the application using Poetry, the two services must be run in separate terminal windows.
-To run the propogator service, run the following command:
+To run the propogator service, run the following command with the appropriate arguments:
 
 ```bash
-poetry run propogator
+poetry run propogator [arguments]
 ```
 
-To run the consumer service, run the following command:
+To run the consumer service, run the following command with the appropriate arguments:
 
 ```bash
-poetry run producer
+poetry run producer [arguments]
 ```
 
 ### Docker
